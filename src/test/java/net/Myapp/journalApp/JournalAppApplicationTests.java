@@ -1,4 +1,4 @@
-package net.engineeringdigest.journalApp;
+package net.Myapp.journalApp;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

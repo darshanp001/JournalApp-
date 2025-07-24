@@ -1,13 +1,11 @@
-package net.engineeringdigest.journalApp.service;
+package net.Myapp.journalApp.service;
 
 //import com.sun.org.slf4j.internal.LoggerFactory;
+import net.Myapp.journalApp.Entity.UserEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.engineeringdigest.journalApp.Entity.JournalEntry;
-import net.engineeringdigest.journalApp.Entity.UserEntry;
-import net.engineeringdigest.journalApp.repository.JournalEntriesRepository;
-import net.engineeringdigest.journalApp.repository.UserEntryRepository;
+import net.Myapp.journalApp.repository.UserEntryRepository;
 import org.bson.types.ObjectId;
 
 import org.springframework.beans.factory.annotation.Autowired;

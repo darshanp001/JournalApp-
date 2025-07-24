@@ -1,6 +1,6 @@
-package net.engineeringdigest.journalApp.config;
+package net.Myapp.journalApp.config;
 
-import net.engineeringdigest.journalApp.service.UserServiceImp;
+import net.Myapp.journalApp.service.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +15,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-@Profile("prod")
-public class SpringSecurityprod extends WebSecurityConfigurerAdapter {
+@Profile("dev")
+public class SpringSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserServiceImp userServiceImp;
@@ -25,7 +25,9 @@ public class SpringSecurityprod extends WebSecurityConfigurerAdapter {
  @Override
 protected void configure(HttpSecurity http) throws Exception{
      http.authorizeRequests()
-             .anyRequest().authenticated()
+             .antMatchers("/journal/**","/users/**").authenticated()    // ** wild card entry
+             .antMatchers("/admin/**").hasRole("ADMIN")
+             .anyRequest().permitAll()
              .and()
              .httpBasic();
      http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().csrf().disable();

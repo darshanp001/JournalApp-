@@ -1,6 +1,6 @@
-package net.engineeringdigest.journalApp.services;
+package net.Myapp.journalApp.services;
 
-import net.engineeringdigest.journalApp.repository.UserEntryRepository;
+import net.Myapp.journalApp.repository.UserEntryRepository;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

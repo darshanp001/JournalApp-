@@ -1,16 +1,12 @@
-package net.engineeringdigest.journalApp.service;
+package net.Myapp.journalApp.service;
 
-import net.engineeringdigest.journalApp.Entity.UserEntry;
-import net.engineeringdigest.journalApp.repository.UserEntryRepository;
+import net.Myapp.journalApp.Entity.UserEntry;
+import net.Myapp.journalApp.repository.UserEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import static net.engineeringdigest.journalApp.service.UserService.passwordEncoder;
 
 @Component
 public class UserServiceImp implements UserDetailsService {

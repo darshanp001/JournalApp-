@@ -1,9 +1,8 @@
-package net.engineeringdigest.journalApp.controller;
+package net.Myapp.journalApp.controller;
 
-import net.engineeringdigest.journalApp.Entity.UserEntry;
-import net.engineeringdigest.journalApp.repository.UserEntryRepository;
-import net.engineeringdigest.journalApp.service.UserService;
-import org.bson.types.ObjectId;
+import net.Myapp.journalApp.Entity.UserEntry;
+import net.Myapp.journalApp.service.UserService;
+import net.Myapp.journalApp.repository.UserEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.Authenticator;
 import java.util.List;
 
 @RestController

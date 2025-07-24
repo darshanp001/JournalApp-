@@ -1,9 +1,9 @@
-package net.engineeringdigest.journalApp.service;
+package net.Myapp.journalApp.service;
 
-import net.engineeringdigest.journalApp.Entity.UserEntry;
+import net.Myapp.journalApp.Entity.JournalEntry;
+import net.Myapp.journalApp.Entity.UserEntry;
 import org.bson.types.ObjectId;
-import net.engineeringdigest.journalApp.Entity.JournalEntry;
-import net.engineeringdigest.journalApp.repository.JournalEntriesRepository;
+import net.Myapp.journalApp.repository.JournalEntriesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ private JournalEntriesRepository journalEntriesRepository;
 UserService userService;
 
 @Transactional
-    public void saveEntry(JournalEntry journalentries,String username){
+    public void saveEntry(JournalEntry journalentries, String username){
          try{
         UserEntry user = userService.findByUserName(username);
         JournalEntry saved = journalEntriesRepository.save(journalentries);
