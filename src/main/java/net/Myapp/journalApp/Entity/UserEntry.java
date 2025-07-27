@@ -1,6 +1,8 @@
 package net.Myapp.journalApp.Entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -13,6 +15,9 @@ import java.util.List;
 
 @Document(collection = "users")
     @Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class UserEntry {
     @Id
     private ObjectId id;
